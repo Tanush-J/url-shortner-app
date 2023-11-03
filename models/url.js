@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const urlSchema = new mongoose.Schema({
-  id: {
+  shortId: {
     require: true,
     type: String,
   },
@@ -9,7 +9,7 @@ const urlSchema = new mongoose.Schema({
     require: true,
     type: String,
   },
-  analytics: [{ timestamp: { type: Number } }],
+  visitHistory: [{ timestamp: { type: Number } }],
 });
 
 const model = mongoose.model('Url', urlSchema);
