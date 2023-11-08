@@ -12,7 +12,9 @@ const handleGenerateNewShortURL = async (req, res) => {
         visitHistory: []
     })
 
-    return res.status(200).json({ id: shortURL });
+    return res.render("home", {
+        id: shortURL
+    })
 }
 
 const handleGetAnalytics = async (req, res) => {
